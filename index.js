@@ -15,9 +15,13 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name,price,category){
+  return {
+        name: name, 
+         price: price, 
+         category: category };
 }
+console.log(createMenuItem('tacos',8,'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,7 +32,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem('eggs',5,'Breakfast'));
+console.log(createMenuItem('burgers',12,'Dinner'));
+console.log(createMenuItem('apple crisps',4,'Dessert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,8 +54,15 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+ discount : function (role){
+   if (role === 'teacher' || role === 'student' ){
+     return 13.5; 
+   }else if (role === 'public') {
+     return 16.2;
+   }
+ } 
 }
+console.log(burger.discount('teacher'));
 
 
 
@@ -69,7 +82,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews.feedback[5]);
 
 
 
